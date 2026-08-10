@@ -1,0 +1,2 @@
+export declare function bind<This, Args extends unknown[], Return>(target: (this: This, ...args: Args) => Return, context: ClassMethodDecoratorContext<This, (this: This, ...args: Args) => Return>): void;
+//# sourceMappingURL=bind.d.ts.map

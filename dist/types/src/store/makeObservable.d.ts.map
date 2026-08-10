@@ -1,0 +1,1 @@
+{"version":3,"file":"makeObservable.d.ts","sourceRoot":"","sources":["../../../../src/store/makeObservable.ts"],"names":[],"mappings":"AAgCA,eAAO,MAAM,cAAc,GAAI,CAAC,SAAS,MAAM,EAAE,KAAK,CAAC,KAAG,CAoCzD,CAAC;AAEF,wBAAgB,UAAU,CACxB,CAAC,SAAS;IAER,KAAK,GAAG,IAAI,EAAE,GAAG,EAAE,GAAG,MAAM,CAAC;CAC9B,EACD,MAAM,EAAE,CAAC;kBAGc,GAAG,EAAE;MAK7B"}
