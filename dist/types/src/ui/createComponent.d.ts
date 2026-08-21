@@ -15,7 +15,7 @@ interface Listener {
     onClick?: (e: PointerEvent) => void;
     onChange?: () => void;
 }
-export declare const listeners: Listener[];
+export declare const listeners: Map<string, Listener>;
 export declare const createComponent: <Props>(componentProps: ComponentProps<Props>) => Component<Props>;
 export declare const createPureComponent: <Props>(componentProps: PureComponentProps<Props>) => Component<ExtraProps & Props>;
 export {};
