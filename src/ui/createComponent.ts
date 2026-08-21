@@ -20,7 +20,7 @@ interface Listener {
   onChange?: () => void;
 }
 
-export const listeners: Listener[] = [];
+export const listeners: Map<string, Listener> = new Map<string, Listener>();
 
 const replaceId = (htmlString: string, id: string) => {
   const cleanHtml = htmlString.trim();
@@ -47,14 +47,21 @@ const renderComponent =
     }
 
     if (onClick || onChange) {
-      const prev = listeners.find((listener) => listener.id === id);
+      if (listeners.has(id)) {
+        const listener = listeners.get(id)!;
 
-      if (prev) {
-        prev.onChange = onChange;
-        prev.onClick = onClick;
-      } else {
-        listeners.push({ id, onClick, onChange });
+        const el = document.getElementById(id);
+
+        if (listener.onClick) {
+          el?.removeEventListener('click', listener.onClick);
+        }
+
+        if (listener.onChange) {
+          el?.removeEventListener('input', listener.onChange);
+        }
       }
+
+      listeners.set(id, { id, onClick, onChange });
     }
 
     return html;
