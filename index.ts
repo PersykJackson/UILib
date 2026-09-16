@@ -2,4 +2,4 @@ export type { Component, ComponentProps, PureComponentProps, ExtraProps, PropsWi
 
 export { createComponent, createPureComponent, mount, renderRoot } from './src/ui';
 
-export { bind, makeObservable, observable, registerStore, subscribe, PrivateValue } from './src/store';
+export { bind, store, observable, registerStore, subscribe, PrivateValue } from './src/store';

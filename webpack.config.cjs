@@ -11,6 +11,9 @@ module.exports = {
       type: 'module',
     },
   },
+  optimization: {
+    minimize: false,
+  },
   experiments: {
     outputModule: true,
   },
